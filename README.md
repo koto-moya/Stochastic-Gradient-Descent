@@ -23,7 +23,7 @@ Use the Mean Squared Error to find the loss
 Apply backwards to the loss
 Then check the grad on the params
 
-> damn Pytorch takes care of everything for you
+> damn PyTorch takes care of everything for you
 
 ### Step 5: Step up the weights
 
@@ -57,7 +57,7 @@ Used the torch.cos as the target. Tried both with noise and without.
 
 ![Clean data](Not_Noisy.png)
 
-Again this is not about the best cos approximator just building intuition on SGD.
+Again this is not about the best cos approximation just building intuition on SGD.
 
 The way I see it, the target is some n-dim surface (using that term loosely here), the predictions are points along a blanket you are laying over the top of the surface.  Then you push all of the spots where voids are felt. You push with a force determined by the gradient of the "difference" or "loss" between the blanket and the surface and the importance you give that gradient (learning rate). Theoretically, this process could fill in all of the nooks and crannies of that surface arbitrarily over a long enough period.  In practice this would lead to over-fitting of noisy data and take a really long time in some cases.  This is where my analogy falls apart.  I could make a more contrived version by saying that the blanket is a special one that (should) settles on the gestalt of your surface, but who likes analogies anyway?  
 

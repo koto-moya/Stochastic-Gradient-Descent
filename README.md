@@ -10,7 +10,7 @@ Create a rank 1 tensor with 3 values.
 
 ### Step 2: Make predictions
 
-Calculate the predictiosn given your init parameters
+Calculate the predictions given your init parameters
 
 > to graph you need to use .detach() on predictions to get the tensor values since grad is applied
 
@@ -41,15 +41,15 @@ Repeat step 2 through 5 in a loop (steps 2-5 can be made into a function)
 ### Step 7: 
 
 Stop the descent
-This can be an arbitrary decision but can also be based on some hueristic.
+This can be an arbitrary decision but can also be based on some heuristic.
 
 ## Applying What I've learned
 
-I applied the 7 steps to apporximate a cos function.  Really simple, just to moitivate the intuition for the technique.
+I applied the 7 steps to approximate a cos function.  Really simple, just to motivate the intuition for the technique.
 
 Used the Mclaurin approximation:  $cos(x) \approx a_0 - a_1\frac{x^2}{2!}+a_2\frac{x^4}{4!}-a_3\frac{x^6}{6!}+a_4\frac{x^8}{8!}$
 
-Where the $a_0 - a_4$ are the parameters (weights) with which I apply the gradient adjustments. Ended up using the 7th approx cause why not.
+Where the $a_0 - a_4$ are the parameters (weights) with which I apply the gradient adjustments. Ended up using the 7th approximation cause why not.
 
 Used the torch.cos as the target. Tried both with noise and without.
 
@@ -63,7 +63,11 @@ The way I see it, the target is some n-dim surface (using that term loosely here
 
 ## Running the code
 
-Clone the repo and run `pip install -r requirements.txt`
+Clone the repo and run `pip3 install -r requirements.txt` in the command line
+
+then run `python3 COS_SGD.py`
+
+Expand the window for better viewing experience.  You can also edit the frame rate to move faster or slower throughout the descent.
 
 
 
